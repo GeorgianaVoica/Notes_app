@@ -1,0 +1,353 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.authentification-form {
+  background-color: #1c1c1c;
+  width:300px;
+  align-items: center;
+  min-height: 170px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin: 12% auto;
+  padding: 50px 10px;
+  box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
+
+.authentification-form h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.authentification-form .input-email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authentification-form .input-email .email-icon {
+  color: rgb(179, 172, 172);
+}
+
+.authentification-form input[type="text"] {
+  padding:7px;
+  background-color: #373535;
+  border-radius: 8px;
+  color: rgb(179, 172, 172);
+  outline: none;
+}
+
+.authentification-form input[type="text"]::placeholder {
+  color: rgb(179, 172, 172);
+}
+
+.authentification-form .login-button {
+  margin-top: 20px;
+}
+
+.notes-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.note.form {
+  background-color: #feb7cb;
+}
+
+.note.form .note-header select {
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  background-color: rgba(210, 138, 173, 0.482);
+  cursor: pointer;
+  padding: 5px 5px;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: #feb7cb;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save-button, .groups-button, .close-button, .see-students-button, .login-button {
+  background-color: #e1e1e1;
+  border:none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.save-button:hover, .groups-button:hover, .close-button:hover, .see-students-button:hover, .login-button:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.note {
+  background-color: #9ccaf8;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size:10pt;
+  white-space: pre-wrap;
+}
+
+.note.simple-note {
+  background-color: #ab9cf8;
+}
+
+.note.simple-note #description-item {
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 1.2em;
+}
+
+.note.simple-note #tag-item {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.note.simple-note #subject-item {
+  font-weight:bold;
+  font-size: 1.2em;
+}
+
+.note-header, .note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-icon, .edit-icon {
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  
+}
+
+.search input {
+  border: none;
+  background-color: rgb(240,240,240);
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.groups-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.filter .tag-filter {
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(240,240,240);
+  cursor: pointer;
+}
+
+.filter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(240,240,240);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.3em;
+  margin-top: 20px;
+}
+
+.popup-inner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background-color: rgb(255,255,255);
+  
+}
+
+.popup-inner .close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.groups-list-header {
+  display: flex;
+  align-items: center;
+}
+
+.groups-list-header input {
+  border: none;
+  background-color: rgb(255,255,255);
+  border-radius: 10px;
+}
+
+.groups-list-header input:focus {
+  outline: none;
+}
+
+.groups-list-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.groups-list-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.groups-list-content .items-list {
+  list-style:circle;
+}
+
+.buttons-list {
+  list-style: none;
+}
+
+.groups-list-content li {
+  padding: 5px;
+}
+
+.students-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.student {
+  background-color: #fedab4;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size:10pt;
+  white-space: pre-wrap;
+}
+
+.student.curent {
+  background-color: #bf7c7c;
+}
+
+.student-header, .student-footer {
+  display: flex;
+  align-items:stretch;
+  justify-content: space-between;
+}
+
+.student-footer .see-notes-button {
+  background-color: #fedab4;
+  border:none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.student-footer .see-notes-button:hover {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  color: #fff;
+}
+
+.student.curent .student-footer .share-notes-button {
+  background-color: #bf7c7c;
+  border:none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.student.curent .student-footer .share-notes-button:hover {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  color: #fff;
+}
+
+.student.form {
+  background-color: #9cf8e9;
+}
+
+.student.form .student-header textarea {
+  background-color: #9cf8e9;
+}
+
+.student.form .student-header .student-tag {
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  background-color: rgba(111, 180, 162, 0.406);
+  cursor: pointer;
+}
+
+.student.form .student-footer .add-student-button {
+  border:none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  padding: 5px 10px 5px 10px;
+}
+
+.student.form .student-footer .add-student-button:hover {
+  background-color: #9cf8e9;
+  color: black;
+  cursor: pointer;
+}
+
+.note.edit {
+  background-color: #eff89c;
+}
+
+.note.edit .description textarea {
+  background-color: #eff89c;
+  border-style: dashed;
+  border-color: rgba(0,0,0,0.2);
+}
+
+.note.edit .note-footer textarea{
+  background-color: #c3ca83;
+  border-style: double;
+}
